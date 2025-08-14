@@ -2,32 +2,34 @@ import { Card } from "@/components/ui/card";
 
 const Skills = () => {
   const skills = [
-    { name: "On-Page SEO", sub: "SEO & Meta Ads", category: "Content & Marketing" },
-    { name: "SEO Content Writing", sub: "SEO & Meta Ads", category: "Content & Marketing" },
-    { name: "Copywriting", sub: "SEO & Meta Ads", category: "Content & Marketing", description: "An art of making wallets whisper, 'Open me.'" },
-    { name: "Keyword Research", sub: "SEO & Meta Ads", category: "Content & Marketing" },
-    { name: "Ghostwriting", sub: "Blog & Ghostwriting", category: "Content & Marketing" },
-    { name: "Brand Storytelling", sub: "Blog & Ghostwriting", category: "Content & Marketing" },
-    { name: "Blog Writing", sub: "Blog & Ghostwriting", category: "Content & Marketing", description: "Trick Google's spiders. Throw keywords like grenades. Rank above the noise." },
-    { name: "LinkedIn Content", sub: "LinkedIn & Personal Branding", category: "Content & Marketing" },
-    { name: "Company Branding and Ghost Writing", sub: "LinkedIn & Personal Branding", category: "Content & Marketing", description: "Making your name echo in empty rooms." },
-    { name: "Social Media Marketing", sub: "LinkedIn & Personal Branding", category: "Content & Marketing" },
+    { name: "Email Writing", sub: "Copywriting", category: "Content & Marketing" },
+    { name: "Landing Pages Writing", sub: "Copywriting", category: "Content & Marketing" },
+    { name: "Web Copies", sub: "Copywriting", category: "Content & Marketing" },
+    { name: "Meta Ads Copies", sub: "Copywriting", category: "Content & Marketing", description: "An art of making wallets whisper, 'Open me.'" },
+    { name: "Onpage SEO", sub: "Blog Writing", category: "Content & Marketing" },
+    { name: "Keyword Research", sub: "Blog Writing", category: "Content & Marketing" },
+    { name: "Guest Post Writing", sub: "Blog Writing", category: "Content & Marketing" },
+    { name: "Brand Storytelling", sub: "Blog Writing", category: "Content & Marketing", description: "Trick Google's spiders. Throw keywords like grenades. Rank above the noise." },
+    { name: "LinkedIn Content", sub: "LinkedIn Ghostwriting & Personal Branding", category: "Content & Marketing" },
+    { name: "Company Branding", sub: "LinkedIn Ghostwriting & Personal Branding", category: "Content & Marketing" },
+    { name: "Engagement Strategy", sub: "LinkedIn Ghostwriting & Personal Branding", category: "Content & Marketing" },
+    { name: "Business Development", sub: "LinkedIn Ghostwriting & Personal Branding", category: "Content & Marketing", description: "Making your name echo in empty rooms." },
   ];
 
-  const subCategories = ["SEO & Meta Ads", "Blog & Ghostwriting", "LinkedIn & Personal Branding"];
+  const subCategories = ["Copywriting", "Blog Writing", "LinkedIn Ghostwriting & Personal Branding"];
 
   const subCategoryColors = {
-    "SEO & Meta Ads": {
+    "Copywriting": {
       bg: "bg-purple-100 dark:bg-purple-900/30",
       text: "text-purple-600 dark:text-purple-400",
       border: "border-purple-200 dark:border-purple-700/50",
     },
-    "Blog & Ghostwriting": {
+    "Blog Writing": {
       bg: "bg-green-100 dark:bg-green-900/30",
       text: "text-green-600 dark:text-green-400",
       border: "border-green-200 dark:border-green-700/50",
     },
-    "LinkedIn & Personal Branding": {
+    "LinkedIn Ghostwriting & Personal Branding": {
       bg: "bg-blue-100 dark:bg-blue-900/30",
       text: "text-blue-600 dark:text-blue-400",
       border: "border-blue-200 dark:border-blue-700/50",
