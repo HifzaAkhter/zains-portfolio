@@ -4,13 +4,13 @@ const Skills = () => {
   const skills = [
     { name: "On-Page SEO", sub: "SEO & Meta Ads", category: "Content & Marketing" },
     { name: "SEO Content Writing", sub: "SEO & Meta Ads", category: "Content & Marketing" },
-    { name: "Copywriting", sub: "SEO & Meta Ads", category: "Content & Marketing" },
+    { name: "Copywriting", sub: "SEO & Meta Ads", category: "Content & Marketing", description: "An art of making wallets whisper, 'Open me.'" },
     { name: "Keyword Research", sub: "SEO & Meta Ads", category: "Content & Marketing" },
     { name: "Ghostwriting", sub: "Blog & Ghostwriting", category: "Content & Marketing" },
     { name: "Brand Storytelling", sub: "Blog & Ghostwriting", category: "Content & Marketing" },
-    { name: "Blog Writing", sub: "Blog & Ghostwriting", category: "Content & Marketing" },
+    { name: "Blog Writing", sub: "Blog & Ghostwriting", category: "Content & Marketing", description: "Trick Google's spiders. Throw keywords like grenades. Rank above the noise." },
     { name: "LinkedIn Content", sub: "LinkedIn & Personal Branding", category: "Content & Marketing" },
-    { name: "Company Branding and Ghost Writing", sub: "LinkedIn & Personal Branding", category: "Content & Marketing" },
+    { name: "Company Branding and Ghost Writing", sub: "LinkedIn & Personal Branding", category: "Content & Marketing", description: "Making your name echo in empty rooms." },
     { name: "Social Media Marketing", sub: "LinkedIn & Personal Branding", category: "Content & Marketing" },
   ];
 
@@ -34,10 +34,18 @@ const Skills = () => {
     },
   };
 
+  // Aggregate descriptions for each subcategory
+  const getCategoryDescription = (sub: string) => {
+    const descriptions = skills
+      .filter((skill) => skill.sub === sub && skill.description)
+      .map((skill) => skill.description);
+    return descriptions.length > 0 ? descriptions.join(" ") : "";
+  };
+
   return (
     <section
       id="skills"
-      className="py-24 px-6 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 min-h-screen flex flex-col items-center"
+      className="py-24 px-6 bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col items-center"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Section Header */}
@@ -56,21 +64,28 @@ const Skills = () => {
           {subCategories.map((sub) => (
             <Card
               key={sub}
-              className="p-8 bg-gradient-to-br from-white/70 via-gray-50/50 to-white/60 dark:from-gray-800/70 dark:via-gray-700/50 dark:to-gray-800/60 backdrop-blur-md border border-gray-100/50 dark:border-gray-700/50 shadow-lg rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
             >
               {/* Subheading */}
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
                 {sub}
               </h3>
 
+              {/* Category Description */}
+              {getCategoryDescription(sub) && (
+                <p className="mb-4 text-sm text-gray-600 dark:text-gray-400 text-center">
+                  {getCategoryDescription(sub)}
+                </p>
+              )}
+
               {/* Skills */}
-              <div className="flex flex-wrap gap-3 justify-center">
+              <div className="flex flex-wrap justify-center gap-3">
                 {skills
                   .filter((skill) => skill.sub === sub)
                   .map((skill) => (
                     <span
                       key={skill.name}
-                      className={`inline-block px-4 py-2 ${subCategoryColors[sub].bg} ${subCategoryColors[sub].text} ${subCategoryColors[sub].border} border rounded-full text-sm font-medium hover:scale-105 hover:shadow-md transition-all duration-300 cursor-default`}
+                      className={`inline-block px-4 py-2 ${subCategoryColors[sub].bg} ${subCategoryColors[sub].text} rounded-full text-sm font-medium cursor-default`}
                     >
                       {skill.name}
                     </span>

@@ -44,13 +44,11 @@ const Experience = () => {
       ],
     },
    
-   
     // --- CV Education ---
     {
       type: "education",
       title: "Masters in Engineering Management – Project Management",
       company: "Bahria University",
-      period: "Ongoing",
       description:
         "Pursuing advanced studies in engineering management with focus on project leadership and planning.",
       achievements: [
@@ -63,7 +61,6 @@ const Experience = () => {
       type: "education",
       title: "Bachelor of Science in Software Engineering",
       company: "COMSATS University Islamabad, Wah Cantt Campus",
-      period: "September 2021 - May 2025",
       description:
         "Pursuing comprehensive education in software engineering with focus on modern development practices and emerging technologies.",
       achievements: [
@@ -120,18 +117,20 @@ const Experience = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center mt-2 md:mt-0">
-                  <Calendar size={16} className="text-gray-500 mr-2" />
-                  <span
-                    className={`px-3 py-1 rounded text-sm font-medium ${
-                      exp.type === "work"
-                        ? "text-blue-600 bg-blue-50"
-                        : "text-green-600 bg-green-50"
-                    }`}
-                  >
-                    {exp.period}
-                  </span>
-                </div>
+                {exp.type === "work" && (
+                  <div className="flex items-center mt-2 md:mt-0">
+                    <Calendar size={16} className="text-gray-500 mr-2" />
+                    <span
+                      className={`px-3 py-1 rounded text-sm font-medium ${
+                        exp.type === "work"
+                          ? "text-blue-600 bg-blue-50"
+                          : "text-green-600 bg-green-50"
+                      }`}
+                    >
+                      {exp.period}
+                    </span>
+                  </div>
+                )}
               </div>
 
               <p className="text-gray-600 mb-4 leading-relaxed text-lg">

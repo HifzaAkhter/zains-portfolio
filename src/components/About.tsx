@@ -39,7 +39,7 @@ const About = () => {
     }, 
     { 
       icon: Users, 
-      stat: "600+", 
+      stat: "500+", 
       label: "Blogs & Web Pages Written", 
     }, 
     { 
