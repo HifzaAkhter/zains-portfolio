@@ -3,32 +3,60 @@ import { Briefcase, GraduationCap, Calendar } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
+    // --- CV Experiences ---
     {
       type: "work",
-      title: "Software Developer Intern",
-      company: "Tangent Technologies, Islamabad, Pakistan",
-      period: "June 2025 – Present",
+      title: "SEO Content Writer",
+      company: "Tangent Technologies, Pakistan",
+      period: "December 2024 – Present",
       description:
-        "Currently focusing on backend development using Node.js by building and integrating RESTful APIs.",
+        "Specializing in writing SEO-optimized content for websites, blogs, and digital marketing campaigns.",
       achievements: [
-        "Currently working with Node.js and SQL for backend services",
-        "Using Postman for API testing and validation",
-        "Earlier contributed to frontend tasks using HTML, CSS, and JavaScript",
-        "Gaining hands-on experience in full stack development",
-        "Improving code quality through collaboration and version control tools",
+        "Developed high-ranking SEO content strategies",
+        "Collaborated with marketing teams to align content with branding",
+        "Conducted keyword research to improve search engine performance",
       ],
     },
     {
       type: "work",
-      title: "Python Intern",
-      company: "Islamabad, Pakistan",
-      period: "June 2023 - September 2023",
+      title: "SEO Content Writer",
+      company: "Rabt Marketing, Islamabad, Pakistan",
+      period: "September 2023 – January 2025",
       description:
-        "Specialized in software solutions and developed custom class modules using Python for ERP solutions.",
+        "Created optimized articles and marketing content to boost brand visibility.",
       achievements: [
-        "Developed custom Python modules for ERP systems",
-        "Specialized in creating efficient software solutions",
-        "Gained hands-on experience in python development",
+        "Managed SEO content for multiple clients",
+        "Applied on-page SEO techniques for better rankings",
+        "Increased website traffic through targeted content",
+      ],
+    },
+    {
+      type: "work",
+      title: "Copywriter",
+      company: "Operations PRO (Pvt) Ltd, Pakistan",
+      period: "September 2022 – December 2023",
+      description:
+        "Crafted compelling copy for advertisements, campaigns, and branding.",
+      achievements: [
+        "Delivered persuasive content for marketing campaigns",
+        "Collaborated with designers to create engaging materials",
+        "Maintained brand voice across different media",
+      ],
+    },
+   
+   
+    // --- CV Education ---
+    {
+      type: "education",
+      title: "Masters in Engineering Management – Project Management",
+      company: "Bahria University",
+      period: "Ongoing",
+      description:
+        "Pursuing advanced studies in engineering management with focus on project leadership and planning.",
+      achievements: [
+        "Studying leadership in technical environments",
+        "Exploring risk and quality management techniques",
+        "Gaining advanced project planning skills",
       ],
     },
     {
@@ -44,32 +72,6 @@ const Experience = () => {
         "Active participation in coding projects and software development",
       ],
     },
-    {
-      type: "education",
-      title: "Pre-Medical",
-      company: "Scholars Science College, Wah Cantt",
-      period: "September 2019 - June 2021",
-      description:
-        "Completed pre-medical studies with excellent grades, developing strong analytical and scientific thinking skills.",
-      achievements: [
-        "Developed strong analytical and problem-solving skills",
-        "Maintained excellent academic performance",
-        "Built foundation in scientific methodology and research",
-      ],
-    },
-    {
-      type: "education",
-      title: "Matriculation",
-      company: "Bahira Foundation College, Wah Cantt",
-      period: "April 2017 - May 2019",
-      description:
-        "Completed secondary education with strong foundation in mathematics and sciences.",
-      achievements: [
-        "Strong foundation in mathematics and sciences",
-        "Excellent academic performance",
-        "Developed core analytical thinking skills",
-      ],
-    },
   ];
 
   return (
@@ -81,7 +83,7 @@ const Experience = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
           <p className="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
-            My academic journey and professional experience in software development
+            My academic journey and professional experience in content writing, engineering, and project management.
           </p>
         </div>
 
