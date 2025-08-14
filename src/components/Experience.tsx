@@ -21,7 +21,7 @@ const Experience = () => {
       type: "work",
       title: "SEO Content Writer",
       company: "Rabt Marketing, Islamabad, Pakistan",
-      period: "September 2023 – January 2025",
+      period: "September 2023 – December 2024",
       description:
         "Created optimized articles and marketing content to boost brand visibility.",
       achievements: [
@@ -34,7 +34,7 @@ const Experience = () => {
       type: "work",
       title: "Copywriter",
       company: "Operations PRO (Pvt) Ltd, Pakistan",
-      period: "September 2022 – December 2023",
+      period: "September 2022 – September 2023",
       description:
         "Crafted compelling copy for advertisements, campaigns, and branding.",
       achievements: [
